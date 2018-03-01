@@ -1,0 +1,21 @@
+<h2>My Tasks</h2>
+
+<div class="container">
+  <div id="newTask">
+    <label>Task:
+      <input #newTaskValue />
+    </label>
+    <button (click)="add(newTaskValue.value); newTaskValue.value=''">
+      add
+    </button>
+  </div>
+
+  <ul class="tasks">
+    <li *ngFor="let task of tasks" (click)="delete(task)">
+       <span >
+          <p>{{task.taskValue}}</p>
+        </span> 
+      </li>
+  </ul>
+</div>
+

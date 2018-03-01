@@ -1,0 +1,13 @@
+{
+	"type": "Collection",
+	"properties": {
+		"taskValue": {
+			"name": "taskValue",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "taskValue",
+			"order": 0
+		}
+	}
+}

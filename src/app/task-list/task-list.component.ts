@@ -3,23 +3,38 @@ import { Task } from "../task"
 import { TaskService } from '../task.service';
 
 import { Observable } from 'rxjs/Observable';
+import { TaskLiatAnimate } from './task-list.animation';
 
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.css']
+  styleUrls: ['./task-list.component.css'],
+  animations: [TaskLiatAnimate]
 })
 export class TaskListComponent implements OnInit, DoCheck {
 
   newTask: Task;
+  selectedTask: Task;
   changed: boolean = false;
   tasks: Task[];
+ 
+
+  
+  onMouseEnter(task: Task) {
+    this.selectedTask = task;
+  }
+
+   
+  onMouseLeave() {
+    this.selectedTask = new Task(null,null);
+  }
 
   constructor(private taskService: TaskService) { }
 
   ngOnInit() {
     this.getTasks();
     this.newTask = new Task(null,null);
+    this.selectedTask = new Task(null,null);
   }
 
   ngDoCheck() {
@@ -52,6 +67,13 @@ export class TaskListComponent implements OnInit, DoCheck {
   delete(task: Task): void {
     this.tasks = this.tasks.filter(t => t !== task);
     this.taskService.deleteTask(task).subscribe();
+  }
+  getState(task: Task): string {
+    if(this.selectedTask.id){
+      return this.selectedTask === task ? 'active' : 'inactive';
+    }
+    else return 'inactive';
+    
   }
 
 }

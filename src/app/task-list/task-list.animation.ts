@@ -2,7 +2,7 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
 
 export const TaskLiatAnimate = trigger('taskState', [
     state('inactive', style({
-      backgroundColor: 'LightGoldenRodYellow',
+      backgroundColor: '#fff',
       transform: 'scale(1)'
     })),
     state('active',   style({

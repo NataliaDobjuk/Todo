@@ -1,10 +1,33 @@
+h2 {
+	padding: 0.5em;
+	background-color: lightgreen;
+	color: #fff;
+}
+button {
+	border: none;
+	padding: 0.5em;
+	background-color: lightgreen;
+	color: #fff;
+	
+}
+label {
+	padding-left: 0.5em;
+}
 div.container {
-	background-color: #dbdbdb;
+	margin: 5px;
+	background-color: #fff;
+	border-radius: 5px;
 	font-size: 100%;
+	margin-bottom: 5px;
+	padding-bottom: 0.5em;
+	
 }
 
 div#newTask input {
-	width: 350px;
+	width: 550px;
+	margin: 1em;
+	border: none;
+	border-bottom: 0.5px solid black;
 }
 
 /* sticky note */
@@ -19,23 +42,23 @@ ul.tasks li {
 	width: 200px;
 	height: 200px;
 	border: 1px solid #bfbfbf;
-    background-color: LightGoldenRodYellow;  /* use #fafad2 if name doesn't work */
+    background-color: #fff;  /* use #fafad2 if name doesn't work */
 	color: black;
 	text-decoration: none;
-	-webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 2px 2px 4px rgba(90, 84, 84, 0.4);
 	-moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 	-o-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-	-webkit-transition: all 0.5s ease-in;
+	/* -webkit-transition: all 0.5s ease-in;
 	-moz-transition: all 0.5s ease-in;
 	-o-transition: all 0.5s ease-in;
 	-ms-transition: all 0.5s ease-in;
-	transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in; */
 	overflow: hidden;
 } 
 
 
 ul.tasks li span {
 	font-family: Verdana, Helvetica, sans-serif;
-	font-size: 150%;
+	font-size: 100%;
 }

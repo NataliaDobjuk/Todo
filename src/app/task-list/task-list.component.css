@@ -1,3 +1,6 @@
+div {
+	width: auto;
+}
 h2 {
 	padding: 0.5em;
 	background-color: lightgreen;
@@ -13,25 +16,11 @@ button {
 label {
 	padding-left: 0.5em;
 }
-div.container {
-	margin: 5px;
-	background-color: #fff;
-	border-radius: 5px;
-	font-size: 100%;
-	margin-bottom: 5px;
-	padding-bottom: 0.5em;
-	
-}
-
-div#newTask input {
-	width: 550px;
-	margin: 1em;
-	border: none;
-	border-bottom: 0.5px solid black;
-}
 
 /* sticky note */
-
+ul.task {
+	width: auto;
+}
 ul.tasks li {
 	display: block;
 	list-style: none;
@@ -53,7 +42,7 @@ ul.tasks li {
 	-moz-transition: all 0.5s ease-in;
 	-o-transition: all 0.5s ease-in;
 	-ms-transition: all 0.5s ease-in;
-	transition: all 0.5s ease-in; */
+	transition: all 0.5s ease-in;*/ 
 	overflow: hidden;
 } 
 

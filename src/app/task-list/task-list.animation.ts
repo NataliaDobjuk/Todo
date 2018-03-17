@@ -16,9 +16,9 @@ export const TaskLiatAnimate = trigger('taskState', [
     transition('inactive <=> active',[ 
       style({
         backgroundColor: 'lightgreen',
-        transform: 'rotate(25deg)'
+        //transform: 'rotate(25deg)'
       }),
-      animate('400ms ease-in-out')
+      animate('200ms ease-in-out')
     ]),
 
     transition('active => void',[ 

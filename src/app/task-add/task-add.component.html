@@ -7,3 +7,14 @@
   <button type="submit">Add</button>
 </form>
  -->
+<div class="container">
+  <h2>My Tasks</h2>
+    <div id="newTask">
+        <label>Add new task:
+          <input #newTaskValue />
+        </label>
+        <button (click)="add(newTaskValue.value); newTaskValue.value=''">
+          add
+        </button>
+   </div>
+</div>

@@ -9,11 +9,14 @@ import './rx-js.operators';
 @Injectable()
 export class TaskService {
 
+  changed: boolean = false;
+
   private url = "http://localhost:2403/tasks";
 
   constructor(private http: Http) { }
 
   public getTasks(): Observable<Task[]> {
+    this.changed = false;
     return this.http.get(this.url)
       .map(this.extractTasks)
       .catch(this.handleError);
@@ -22,6 +25,7 @@ export class TaskService {
 
   public getTask(id: string): Observable<Task> {
     let taskUrl = this.url + "/" + id;
+    
 
     return this.http.get(taskUrl)
       .map(this.extraxtTask)
@@ -29,6 +33,7 @@ export class TaskService {
   }
 
   public addTask(task: Task): Observable<Task> {
+    this.changed = true;
     return this.http.post(this.url, task)
       .catch(this.handleError);
   }

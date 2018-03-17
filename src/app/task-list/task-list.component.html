@@ -1,17 +1,4 @@
-
-
-<div class="container">
-<h2>My Tasks</h2>
-  <div id="newTask">
-    <label>Task:
-      <input #newTaskValue />
-    </label>
-    <button (click)="add(newTaskValue.value); newTaskValue.value=''">
-      add
-    </button>
-  </div>
-
-  <ul class="tasks">
+<ul class="tasks">
     <li *ngFor="let task of tasks" (click)="delete(task)" 
       (mouseenter)="onMouseEnter(task)"
       (mouseleave)="onMouseLeave()" 
@@ -22,5 +9,5 @@
         </span> 
       </li>
   </ul>
-</div>
+
 
